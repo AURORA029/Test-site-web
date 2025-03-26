@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Association d'orientation scolaire et professionnelle à Madagascar - Tests, fiches métiers et ressources éducatives">
+    <title>OrientaMad - Orientation scolaire Madagascar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="OrientaMad Logo">
+                <h1>OrientaMad</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#tests">Tests d'orientation</a></li>
+                    <li><a href="#metiers">Fiches métiers</a></li>
+                    <li><a href="#ressources">Ressources scolaires</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button id="theme-toggle" aria-label="Changer le mode clair/sombre">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="language-switcher">
+                    <button class="active">FR</button>
+                    <button>MG</button>
+                </div>
+            </div>
+            <button class="menu-toggle" aria-label="Menu mobile">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="accueil" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Bienvenue sur OrientaMad</h2>
+                    <p>Votre compagnon pour une orientation scolaire et professionnelle réussie à Madagascar</p>
+                    <div class="hero-buttons">
+                        <a href="#tests" class="btn primary">Faire un test</a>
+                        <a href="#metiers" class="btn secondary">Découvrir les métiers</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="hero-image.png" alt="Étudiants malgaches">
+                </div>
+            </div>
+        </section>
+
+        <section id="tests" class="tests-section">
+            <div class="container">
+                <h2>Tests d'orientation</h2>
+                <p>Découvrez vos compétences et centres d'intérêt grâce à nos tests scientifiquement validés.</p>
+                
+                <div class="test-cards">
+                    <div class="test-card">
+                        <div class="test-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Test de compétences</h3>
+                        <p>Évaluez vos aptitudes dans différents domaines.</p>
+                        <a href="#" class="btn small">Commencer</a>
+                    </div>
+                    
+                    <div class="test-card">
+                        <div class="test-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Test d'intérêts</h3>
+                        <p>Découvrez les métiers qui correspondent à vos passions.</p>
+                        <a href="#" class="btn small">Commencer</a>
+                    </div>
+                    
+                    <div class="test-card">
+                        <div class="test-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Test de personnalité</h3>
+                        <p>Identifiez les environnements de travail qui vous conviennent.</p>
+                        <a href="#" class="btn small">Commencer</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="metiers" class="metiers-section">
+            <div class="container">
+                <h2>Explorez les métiers</h2>
+                <div class="search-bar">
+                    <input type="text" placeholder="Rechercher un métier...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="filters">
+                    <select id="secteur-filter">
+                        <option value="">Tous les secteurs</option>
+                        <option value="sante">Santé</option>
+                        <option value="technologie">Technologie</option>
+                        <option value="education">Éducation</option>
+                        <option value="agriculture">Agriculture</option>
+                    </select>
+                    
+                    <select id="niveau-filter">
+                        <option value="">Tous les niveaux</option>
+                        <option value="bac">Bac</option>
+                        <option value="bac+2">Bac+2</option>
+                        <option value="bac+3">Bac+3 et plus</option>
+                    </select>
+                </div>
+                
+                <div class="metiers-grid">
+                    <!-- Les fiches métiers seront chargées dynamiquement ici -->
+                </div>
+            </div>
+        </section>
+
+        <section id="ressources" class="ressources-section">
+            <div class="container">
+                <h2>Ressources scolaires</h2>
+                <p>Toutes les informations nécessaires pour votre parcours éducatif à Madagascar</p>
+                
+                <div class="ressources-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="etablissements">Établissements</button>
+                        <button class="tab-btn" data-tab="programmes">Programmes</button>
+                        <button class="tab-btn" data-tab="bourses">Bourses</button>
+                        <button class="tab-btn" data-tab="conseils">Conseils</button>
+                    </div>
+                    
+                    <div class="tab-content active" id="etablissements">
+                        <h3>Établissements scolaires et universitaires</h3>
+                        <div class="ressources-list">
+                            <!-- Contenu dynamique -->
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="programmes">
+                        <h3>Programmes d'études</h3>
+                        <div class="ressources-list">
+                            <!-- Contenu dynamique -->
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="bourses">
+                        <h3>Bourses et aides financières</h3>
+                        <div class="ressources-list">
+                            <!-- Contenu dynamique -->
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="conseils">
+                        <h3>Conseils pratiques</h3>
+                        <div class="ressources-list">
+                            <!-- Contenu dynamique -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Contactez-nous</h2>
+                <div class="contact-container">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nom</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <select id="subject" name="subject">
+                                <option value="question">Question</option>
+                                <option value="partnership">Partenariat</option>
+                                <option value="test">Problème avec un test</option>
+                                <option value="other">Autre</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn primary">Envoyer</button>
+                    </form>
+                    
+                    <div class="contact-info">
+                        <h3>Nos coordonnées</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Antananarivo, Madagascar</p>
+                        <p><i class="fas fa-phone"></i> +261 34 00 000 00</p>
+                        <p><i class="fas fa-envelope"></i> contact@orientamad.mg</p>
+                        
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>OrientaMad</h3>
+                    <p>Association pour l'orientation scolaire et professionnelle à Madagascar.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#tests">Tests</a></li>
+                        <li><a href="#metiers">Métiers</a></li>
+                        <li><a href="#ressources">Ressources</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Ressources</h3>
+                    <ul>
+                        <li><a href="#">Fiches PDF</a></li>
+                        <li><a href="#">Vidéos métiers</a></li>
+                        <li><a href="#">Parcours inspirants</a></li>
+                        <li><a href="#">Calendrier scolaire</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Votre email">
+                        <button type="submit" class="btn small">S'inscrire</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 OrientaMad. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Conditions d'utilisation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
